@@ -1,0 +1,43 @@
+﻿@page "/getdata"
+@using projectv2.Shared.Models;
+@inject HttpClient Http;
+
+<h1>Get Data</h1>
+
+
+
+@if (mails == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mail in mails)
+            {
+                <tr>
+                    <td>@mail.Name</td>
+                    <td>@mail.Email</td>
+                    <td>@mail.Message</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    Contact[]? mails;
+
+    protected override async Task OnInitializedAsync()
+    {
+        mails = await Http.GetFromJsonAsync<Contact[]>("/contact");
+    }
+}

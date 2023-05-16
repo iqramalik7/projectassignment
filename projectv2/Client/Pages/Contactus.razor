@@ -1,0 +1,40 @@
+﻿@page "/contactus"
+@using System.Text.Json;
+@using projectv2.Shared.Models;
+@inject HttpClient Http;
+
+<body>
+    <div class="msg-con">
+        <div class="con">
+            <EditForm Model="c" OnValidSubmit="@HandleValidSubmit" class="frm">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <InputText id="" @bind-Value="c.Name" placeholder="Name" class="field" />
+                <InputText @bind-Value="c.Email" id="email" class="field" placeholder="E Mail" />
+                <InputTextArea @bind-Value="c.Message" id="" placeholder="Message" class="field" />
+                <button id="sub-btn" @onclick="HandleValidSubmit" type="submit">Send</button>
+            </EditForm>
+        </div>
+        <h1>@message</h1>
+    </div>
+</body>
+
+@code {
+
+    Contact c = new Contact();
+    string message = "";
+
+    async void HandleValidSubmit()
+    {
+        var a = await Http.PostAsJsonAsync<Contact>("/contact",c);
+        if (a.IsSuccessStatusCode)
+        {
+            message = "Success";
+        }
+        else
+        {
+            message = "Failed";
+        }
+        StateHasChanged();
+    }
+}

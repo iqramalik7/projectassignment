@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.mainn{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.mmain-inner{
+    clear: both;
+    width: 100%;
+}
+.lower{
+    width: 100%;
+    height: 700px;
+    background-image: url(/Images/dottet_bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+}
+#lower-con{
+    padding: 20px;
+    text-align: center;
+    width: 60%;
+    height: 100%;
+    background: transparent;
+}
+#about h1{
+    margin-top: 100px;
+    font-size: 50px;
+}
+#about-cards{
+    margin-top: 20px;
+    height: 400px;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.cards-user{
+    height: 70%;
+    width: auto;
+    background: transparent;
+}
+.cards-user img{
+    height: 100%;
+    border-radius: 10%;
+}
+.cards-user h1{
+    margin-top: 20px;
+}
+.course-con{
+    width: 100%;
+    height: auto;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-course{
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+    height: 90%;
+    background: transparent;
+}
+.inner-course p{
+    margin: 20px;
+}
+.inner-course h1{
+    font-size: 40px;
+}
+.course-list{
+    height: 78%;
+    width: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-courses{
+    height: 100%;
+    width: 30%;
+    background: transparent;
+}
+.card-courses-img{
+    margin: 30px;
+    background: transparent;
+    height: 50%;
+}
+.card-courses-img img{
+    height: 100%;
+}
+#course-seemore{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 10px;
+}
+#see-more{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    color: aliceblue;
+    background-color: #06389e;
+}
+.blue_pattern_bg{
+    background-image: url(/Images/blue_bg.png);
+    background-attachment: fixed;
+    background-position: center center;
+    min-height: 200px;
+    padding: 100px 0 0;
+}
+.full{
+    color: aliceblue;
+}
+.full h4{
+    font-size: 30px;
+}
+.full p{
+    padding: 0 20px 30px 0;
+    font-size: x-large;
+}
+#sub-input{
+    width: 400px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    padding: 0 170px 0 25px;
+    font-size: 18px;
+    line-height: 60px;
+}
+#sub-form{
+    position: relative;
+}
+.col-md-6{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#sub-btn{
+    background: #3a3a3a;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    color: #fff;
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 170px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 62px;
+    clear: both;
+}
